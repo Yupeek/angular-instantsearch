@@ -3,8 +3,5 @@
 
 node_modules
 
-dist/*
-!dist/package.json
-
 netlify-dist/*
 !netlify-dist/.gitkeep

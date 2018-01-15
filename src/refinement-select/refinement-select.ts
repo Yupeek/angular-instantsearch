@@ -51,10 +51,6 @@ export type RefinementSelectState = {
                           value="{{item.value}}"
                   >
                     <span [class]="cx('label')">
-                      <span
-                              [class]="cx('checkbox')"
-                              [checked]="item.isRefined"
-                      />
                       <ng-ais-highlight
                               attributeName="highlighted"
                               [hit]="item"
