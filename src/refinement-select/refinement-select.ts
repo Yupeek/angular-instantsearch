@@ -22,56 +22,57 @@ export type RefinementSelectState = {
   selector: "ng-ais-refinement-select",
   template: `
       <div [class]="cx()">
-          <ng-ais-header [header]="header" [className]="cx('header')"></ng-ais-header>
+          <p>it works</p>
+          <!--<ng-ais-header [header]="header" [className]="cx('header')"></ng-ais-header>-->
 
-          <div [class]="cx('body')">
-              <form
-                      [class]="cx('form')"
-                      *ngIf="withSearchBox"
-                      (submit)="handleSubmit($event)"
-                      novalidate
-              >
-                  <input
-                          [class]="cx('input')"
-                          autocapitalize="off"
-                          autocorrect="off"
-                          placeholder="{{searchPlaceholder}}"
-                          role="textbox"
-                          spellcheck="false"
-                          type="text"
-                          [value]="searchQuery"
-                          (input)="handleChange($event.target.value)"
-                  />
-              </form>
+          <!--<div [class]="cx('body')">-->
+              <!--<form-->
+                      <!--[class]="cx('form')"-->
+                      <!--*ngIf="withSearchBox"-->
+                      <!--(submit)="handleSubmit($event)"-->
+                      <!--novalidate-->
+              <!--&gt;-->
+                  <!--<input-->
+                          <!--[class]="cx('input')"-->
+                          <!--autocapitalize="off"-->
+                          <!--autocorrect="off"-->
+                          <!--placeholder="{{searchPlaceholder}}"-->
+                          <!--role="textbox"-->
+                          <!--spellcheck="false"-->
+                          <!--type="text"-->
+                          <!--[value]="searchQuery"-->
+                          <!--(input)="handleChange($event.target.value)"-->
+                  <!--/>-->
+              <!--</form>-->
 
-              <select [class]="cx('list')">
-                  <option [class]="cx('item') + (item.isRefined ? cx('item', 'selected') : '')"
-                          *ngFor="let item of items"
-                          (click)="refine($event, item)"
-                          value="{{item.value}}"
-                  >
-                    <span [class]="cx('label')">
-                      <ng-ais-highlight
-                              attributeName="highlighted"
-                              [hit]="item"
-                      >
-                      </ng-ais-highlight>
-                      <span [class]="cx('count')">
-                        {{item.count}}
-                      </span>
-                    </span>
-                  </option>
-              </select>
+              <!--<select [class]="cx('list')">-->
+                  <!--<option [class]="cx('item') + (item.isRefined ? cx('item', 'selected') : '')"-->
+                          <!--*ngFor="let item of items"-->
+                          <!--(click)="refine($event, item)"-->
+                          <!--value="{{item.value}}"-->
+                  <!--&gt;-->
+                    <!--<span [class]="cx('label')">-->
+                      <!--<ng-ais-highlight-->
+                              <!--attributeName="highlighted"-->
+                              <!--[hit]="item"-->
+                      <!--&gt;-->
+                      <!--</ng-ais-highlight>-->
+                      <!--<span [class]="cx('count')">-->
+                        <!--{{item.count}}-->
+                      <!--</span>-->
+                    <!--</span>-->
+                  <!--</option>-->
+              <!--</select>-->
 
-              <button
-                      *ngIf="state.canToggleShowMore"
-                      (click)="state.toggleShowMore()"
-              >
-                  {{state.isShowingMore ? showLessLabel : showMoreLabel}}
-              </button>
-          </div>
+              <!--<button-->
+                      <!--*ngIf="state.canToggleShowMore"-->
+                      <!--(click)="state.toggleShowMore()"-->
+              <!--&gt;-->
+                  <!--{{state.isShowingMore ? showLessLabel : showMoreLabel}}-->
+              <!--</button>-->
+          <!--</div>-->
 
-          <ng-ais-footer [footer]="footer" [className]="cx('footer')"></ng-ais-footer>
+          <!--<ng-ais-footer [footer]="footer" [className]="cx('footer')"></ng-ais-footer>-->
       </div>
   `
 })
